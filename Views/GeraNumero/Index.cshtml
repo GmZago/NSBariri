@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Jogo de Adivinhação</h1>
+
+<form asp-action="GeraNumero">
+    <label for="guess">Digite um número:</label>
+    <input type="number" name="numerodigitado" id="numerodigitado" required>
+    <input id="numeroSecreto" name="numeroSecreto" value="@ViewBag.NumeroGerado" style="display:none;" />
+    <button type="submit">Enviar Palpite</button>
+</form>
+
+<p>@ViewBag.Feedback</p>
